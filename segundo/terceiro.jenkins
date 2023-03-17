@@ -1,4 +1,12 @@
-echo "Primeiro Push feito com Jenkins"
-sh 'git add .'
-sh 'git commit -m "Merged develop branch to master'
-sh "git push origin main"
+    stage('Git Push'){
+    steps{
+        script{
+            GIT_CREDS = credentials(<git creds id>)
+            sh '''
+                git add .
+                git commit -m "push to git"
+                git push origin main <branch>
+            '''
+        }
+    }
+}
