@@ -1,0 +1,4 @@
+echo "Primeiro Push feito com Jenkins"
+sh 'git add .'
+sh 'git commit -m "Merged develop branch to master'
+sh "git push origin main"
