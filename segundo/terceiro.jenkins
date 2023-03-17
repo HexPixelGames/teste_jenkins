@@ -1,11 +1,10 @@
     stage('Git Push'){
     steps{
         script{
-            GIT_CREDS = credentials(<git creds id>)
             sh '''
                 git add .
                 git commit -m "push to git"
-                git push origin main <branch>
+                git push origin main<branch>
             '''
         }
     }
